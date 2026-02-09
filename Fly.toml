@@ -1,0 +1,13 @@
+app = "promo-bot"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[build]
+  builder = "paketobuildpacks/builder:base"
+
+[env]
+  PYTHONUNBUFFERED = "1"
+
+[processes]
+  app = "python promo.py"
